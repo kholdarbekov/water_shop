@@ -117,7 +117,7 @@
                             sizes="100vw"
                             class="hero-product-image"
                         />
-                        <a href="{% url "product_detail" pk=best_water_warehouse.water.pk %}" class="hero-product-title-link w-inline-block">
+                        <a href="{% url "product_detail" pk=best_water_warehouse.water.pk|default:0 %}" class="hero-product-title-link w-inline-block">
                             <div>{{ best_water_warehouse.water.name }}</div>
                         </a>
                         <div class="hero-product-description">{{ best_water_warehouse.water.description|safe }}</div>
@@ -424,7 +424,7 @@
                                 sizes="100vw"
                                 class="hero-product-image sub-product"
                             />
-                            <a href="{% url "product_detail" pk=water.water.pk %}" class="hero-product-title-link sub-product w-inline-block">
+                            <a href="{% url "product_detail" pk=water.water.pk|default:0 %}" class="hero-product-title-link sub-product w-inline-block">
                                 <div>{{ water.water.name}}</div>
                             </a>
                             <div class="add-to-cart">
