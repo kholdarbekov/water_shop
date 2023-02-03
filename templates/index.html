@@ -109,7 +109,8 @@
         <div class="w-layout-grid hero-slider-grid">
             <div class="w-dyn-list">
                 <div role="list" class="w-dyn-items">
-                    <div role="listitem" class="hero-product-item w-dyn-item">
+                    {% if best_water_warehouse %}
+                        <div role="listitem" class="hero-product-item w-dyn-item">
                         <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60474cf166a014fbb4d30760_Map Grey.svg" loading="lazy" alt="" class="hero-product-map" />
                         <img
                             src="{{ best_water_warehouse.water.image.url }}"
@@ -117,7 +118,7 @@
                             sizes="100vw"
                             class="hero-product-image"
                         />
-                        <a href="{% url "product_detail" pk=best_water_warehouse.water.pk|default:0 %}" class="hero-product-title-link w-inline-block">
+                        <a href="{% url "product_detail" pk=best_water_warehouse.water.pk %}" class="hero-product-title-link w-inline-block">
                             <div>{{ best_water_warehouse.water.name }}</div>
                         </a>
                         <div class="hero-product-description">{{ best_water_warehouse.water.description|safe }}</div>
@@ -411,6 +412,7 @@
                             </div>
                         </div>
                     </div>
+                    {% endif %}
                 </div>
             </div>
             <div id="w-node-a2828ecc-ea35-37d3-3ef4-698719db6238-d1c3023d" class="home-visit-shop-wrapper">
@@ -424,7 +426,7 @@
                                 sizes="100vw"
                                 class="hero-product-image sub-product"
                             />
-                            <a href="{% url "product_detail" pk=water.water.pk|default:0 %}" class="hero-product-title-link sub-product w-inline-block">
+                            <a href="{% url "product_detail" pk=water.water.pk %}" class="hero-product-title-link sub-product w-inline-block">
                                 <div>{{ water.water.name}}</div>
                             </a>
                             <div class="add-to-cart">
