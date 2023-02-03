@@ -1,0 +1,1358 @@
+{% extends "base.html" %} {% block title %}{{ object.name }}Product detail{% endblock %} {% block content %}
+<div class="product-template-fixed-cta">
+    <div class="product-template-fixed-container">
+        <h3 class="fixed-price-banner-title">{{ object.name }}</h3>
+        <div class="fixed-add-to-cart">
+            <form
+                data-node-type="commerce-add-to-cart-form"
+                data-commerce-sku-id="604621d7da72bdb92a8182ce"
+                data-loading-text="Adding to cart..."
+                data-commerce-product-id="604621d7a161ad907614f0db"
+                class="w-commerce-commerceaddtocartform add-to-cart-wrapper fixed-section"
+            >
+                <div
+                    data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_sku_values_3dr%22%2C%22to%22%3A%22optionValues%22%7D%5D"
+                    data-commerce-product-sku-values="%7B%22abd2b1c930eba711d885c67dd465e345%22%3A%22232caafa5f7beaf65b9384c4ff91a6aa%22%7D"
+                    data-node-type="commerce-add-to-cart-option-list"
+                    data-commerce-product-id="604621d7a161ad907614f0db"
+                    data-preselect-default-variant="false"
+                    class="product-option-list fixed-section"
+                    role="group"
+                >
+                    <div role="group">
+                        <select
+                            id="option-set-abd2b1c930eba711d885c67dd465e345"
+                            data-node-type="commerce-add-to-cart-option-select"
+                            data-commerce-option-set-id="abd2b1c930eba711d885c67dd465e345"
+                            class="select-field fixed-price w-select"
+                            required=""
+                        >
+                            <option selected="" value="">Select Grind Style</option>
+                            <option value="232caafa5f7beaf65b9384c4ff91a6aa">Wholebean</option>
+                            <option value="ea99b16dd5756d872241961c37d87765">Cafetiere</option>
+                            <option value="78f9cc7f8cc4b898de7625ac8d070c2b">Filter</option>
+                            <option value="992023b545e5415e2157810ef76e2a71">Espresso</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <div
+                        data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D"
+                        data-wf-sku-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22default-sku%3Acompare-at-price%22%3A%7B%22exists%22%3A%22no%22%2C%22type%22%3A%22CommercePrice%22%7D%7D%7D%2C%22timezone%22%3A%22Europe%2FLondon%22%7D"
+                        class="product-template-price fixed-price w-condition-invisible"
+                    >
+                        {{ object.price|add:1000 }} UZS
+                    </div>
+                    <div
+                        data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_compare_at_price_7dr10dr%22%2C%22to%22%3A%22innerHTML%22%7D%5D"
+                        data-wf-sku-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22default-sku%3Acompare-at-price%22%3A%7B%22exists%22%3A%22yes%22%2C%22type%22%3A%22CommercePrice%22%7D%7D%7D%2C%22timezone%22%3A%22Europe%2FLondon%22%7D"
+                        class="product-template-price compare-fixed-price"
+                    >
+                        {{ object.price }} UZS
+                    </div>
+                </div>
+                <div class="add-to-cart-row fixed-section">
+                    <input
+                        type="number"
+                        pattern="^[0-9]+$"
+                        inputmode="numeric"
+                        id="quantity-9cebce7ccb50c32234a663f6ac3abe1e"
+                        name="commerce-add-to-cart-quantity-input"
+                        min="1"
+                        class="w-commerce-commerceaddtocartquantityinput quantity"
+                        value="1"
+                    />
+                    <input
+                        type="submit"
+                        data-node-type="commerce-add-to-cart-button"
+                        data-loading-text="Adding to cart..."
+                        value="Add to Cart"
+                        aria-busy="false"
+                        aria-haspopup="dialog"
+                        class="w-commerce-commerceaddtocartbutton add-to-cart-button"
+                    />
+                    <a
+                        data-node-type="commerce-buy-now-button"
+                        data-default-text="Buy now"
+                        data-subscription-text="Subscribe now"
+                        aria-busy="false"
+                        aria-haspopup="false"
+                        style="display: none;"
+                        class="w-commerce-commercebuynowbutton buy-now-button"
+                        href="../checkout.html"
+                    >
+                        Buy now
+                    </a>
+                </div>
+            </form>
+            <div style="display: none;" class="w-commerce-commerceaddtocartoutofstock error-state">
+                <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6048a70f30f0076051c87868_icons8_error.svg" loading="lazy" alt="Alert Icon" class="error-icon" />
+                <div>This product is out of stock.</div>
+            </div>
+            <div data-node-type="commerce-add-to-cart-error" style="display: none;" class="w-commerce-commerceaddtocarterror error-state">
+                <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6048a70f30f0076051c87868_icons8_error.svg" loading="lazy" alt="Alert Icon" class="error-icon" />
+                <div
+                    data-node-type="commerce-add-to-cart-error"
+                    class="error-message"
+                    data-w-add-to-cart-quantity-error="Product is not available in this quantity."
+                    data-w-add-to-cart-general-error="Something went wrong when adding this item to the cart."
+                    data-w-add-to-cart-mixed-cart-error="You can’t purchase another product with a subscription."
+                    data-w-add-to-cart-buy-now-error="Something went wrong when trying to purchase this item."
+                    data-w-add-to-cart-checkout-disabled-error="Checkout is disabled on this site."
+                    data-w-add-to-cart-select-all-options-error="Please select a Grind Style option."
+                >
+                    Product is not available in this quantity.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section wf-section">
+    <div class="container">
+        <div class="w-layout-grid product-template-grid">
+            <div class="product-template-grid-column">
+                <h1>{{ object.name }}</h1>
+                <div
+                    data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D"
+                    data-wf-sku-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22default-sku%3Acompare-at-price%22%3A%7B%22exists%22%3A%22no%22%2C%22type%22%3A%22CommercePrice%22%7D%7D%7D%2C%22timezone%22%3A%22Europe%2FLondon%22%7D"
+                    class="product-template-price w-condition-invisible"
+                >
+                    {{object.price|add:1000}} UZS
+                </div>
+                <div
+                    data-wf-sku-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22default-sku%3Acompare-at-price%22%3A%7B%22exists%22%3A%22yes%22%2C%22type%22%3A%22CommercePrice%22%7D%7D%7D%2C%22timezone%22%3A%22Europe%2FLondon%22%7D"
+                    class="was-price-row"
+                >
+                    <div class="product-template-price was-price-title">Was</div>
+                    <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D" class="product-template-price was-price">{{object.price|add:1000}} UZS</div>
+                </div>
+                <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_compare_at_price_7dr10dr%22%2C%22to%22%3A%22innerHTML%22%7D%5D" class="product-template-price compare-price">{{object.price}} UZS</div>
+                <div class="bag-size-row product-template">
+                    <div class="bag-size-text">Size</div>
+                    <div class="bag-size-text">{{ object.volume }}</div>
+                    <div class="bag-size-text">{{ object.unit }}</div>
+                </div>
+                <p>{{ object.description|safe }}</p>
+                <div><strong>Tasting notes</strong></div>
+                <div class="w-dyn-list">
+                    <div role="list" class="tasting-notes-row w-dyn-items">
+                        <div role="listitem" class="tasting-note-item w-dyn-item">
+                            <a href="../tasting-notes/smokey.html" class="tasting-note-link w-inline-block">
+                                <div>Smokey</div>
+                            </a>
+                        </div>
+                        <div role="listitem" class="tasting-note-item w-dyn-item">
+                            <a href="../tasting-notes/sweet.html" class="tasting-note-link w-inline-block">
+                                <div>Sweet</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <form
+                        data-node-type="commerce-add-to-cart-form"
+                        data-commerce-sku-id="604621d7da72bdb92a8182ce"
+                        data-loading-text="Adding to cart..."
+                        data-commerce-product-id="604621d7a161ad907614f0db"
+                        class="w-commerce-commerceaddtocartform add-to-cart-wrapper"
+                    >
+                        <div><strong>Grind style</strong></div>
+                        <div
+                            data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_sku_values_3dr%22%2C%22to%22%3A%22optionValues%22%7D%5D"
+                            data-commerce-product-sku-values="%7B%22abd2b1c930eba711d885c67dd465e345%22%3A%22232caafa5f7beaf65b9384c4ff91a6aa%22%7D"
+                            data-node-type="commerce-add-to-cart-option-list"
+                            data-commerce-product-id="604621d7a161ad907614f0db"
+                            data-preselect-default-variant="false"
+                            class="product-option-list product-template"
+                            role="group"
+                        >
+                            <div role="group">
+                                <div
+                                    id="option-set-abd2b1c930eba711d885c67dd465e345"
+                                    data-node-type="commerce-add-to-cart-pill-group"
+                                    data-commerce-option-set-id="abd2b1c930eba711d885c67dd465e345"
+                                    class="w-commerce-commerceaddtocartoptionpillgroup button-group"
+                                    role="radiogroup"
+                                    aria-label="Grind Style"
+                                >
+                                    <div
+                                        data-node-type="commerce-add-to-cart-pill"
+                                        class="w-commerce-commerceaddtocartoptionpill option-button"
+                                        role="radio"
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        tabindex="-1"
+                                        data-option-id="232caafa5f7beaf65b9384c4ff91a6aa"
+                                    >
+                                        <img
+                                            src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c2ba41e5eca96292318_icons8_french_press.svg"
+                                            loading="lazy"
+                                            data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Cafetiere%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                            data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                            alt="Wholebean"
+                                            class="option-icon w-condition-invisible"
+                                        />
+                                        <img
+                                            src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c20e61c0d5ed08ebb49_icons8_coffee_beans.svg"
+                                            loading="lazy"
+                                            data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Wholebean%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                            data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                            alt="Wholebean"
+                                            class="option-icon"
+                                        />
+                                        <img
+                                            src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c6232525838003e04fd_icons8_coffee_pot.svg"
+                                            loading="lazy"
+                                            data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Filter%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                            data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                            alt="Wholebean"
+                                            class="option-icon w-condition-invisible"
+                                        />
+                                        <img
+                                            src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462cc8089494272693d772_icons8_cafe.svg"
+                                            loading="lazy"
+                                            data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Espresso%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                            data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                            alt="Wholebean"
+                                            class="option-icon w-condition-invisible"
+                                        />
+                                        <div data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D">
+                                            Wholebean
+                                        </div>
+                                    </div>
+                                    <div
+                                        data-node-type="commerce-add-to-cart-pill"
+                                        class="w-commerce-commerceaddtocartoptionpill option-button"
+                                        role="radio"
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        tabindex="-1"
+                                        data-option-id="ea99b16dd5756d872241961c37d87765"
+                                    >
+                                        <img
+                                            src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c2ba41e5eca96292318_icons8_french_press.svg"
+                                            loading="lazy"
+                                            data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Cafetiere%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                            data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                            alt="Cafetiere"
+                                            class="option-icon"
+                                        />
+                                        <img
+                                            src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c20e61c0d5ed08ebb49_icons8_coffee_beans.svg"
+                                            loading="lazy"
+                                            data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Wholebean%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                            data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                            alt="Cafetiere"
+                                            class="option-icon w-condition-invisible"
+                                        />
+                                        <img
+                                            src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c6232525838003e04fd_icons8_coffee_pot.svg"
+                                            loading="lazy"
+                                            data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Filter%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                            data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                            alt="Cafetiere"
+                                            class="option-icon w-condition-invisible"
+                                        />
+                                        <img
+                                            src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462cc8089494272693d772_icons8_cafe.svg"
+                                            loading="lazy"
+                                            data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Espresso%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                            data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                            alt="Cafetiere"
+                                            class="option-icon w-condition-invisible"
+                                        />
+                                        <div data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D">
+                                            Cafetiere
+                                        </div>
+                                    </div>
+                                    <div
+                                        data-node-type="commerce-add-to-cart-pill"
+                                        class="w-commerce-commerceaddtocartoptionpill option-button"
+                                        role="radio"
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        tabindex="-1"
+                                        data-option-id="78f9cc7f8cc4b898de7625ac8d070c2b"
+                                    >
+                                        <img
+                                            src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c2ba41e5eca96292318_icons8_french_press.svg"
+                                            loading="lazy"
+                                            data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Cafetiere%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                            data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                            alt="Filter"
+                                            class="option-icon w-condition-invisible"
+                                        />
+                                        <img
+                                            src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c20e61c0d5ed08ebb49_icons8_coffee_beans.svg"
+                                            loading="lazy"
+                                            data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Wholebean%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                            data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                            alt="Filter"
+                                            class="option-icon w-condition-invisible"
+                                        />
+                                        <img
+                                            src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c6232525838003e04fd_icons8_coffee_pot.svg"
+                                            loading="lazy"
+                                            data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Filter%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                            data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                            alt="Filter"
+                                            class="option-icon"
+                                        />
+                                        <img
+                                            src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462cc8089494272693d772_icons8_cafe.svg"
+                                            loading="lazy"
+                                            data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Espresso%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                            data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                            alt="Filter"
+                                            class="option-icon w-condition-invisible"
+                                        />
+                                        <div data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D">
+                                            Filter
+                                        </div>
+                                    </div>
+                                    <div
+                                        data-node-type="commerce-add-to-cart-pill"
+                                        class="w-commerce-commerceaddtocartoptionpill option-button"
+                                        role="radio"
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        tabindex="-1"
+                                        data-option-id="992023b545e5415e2157810ef76e2a71"
+                                    >
+                                        <img
+                                            src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c2ba41e5eca96292318_icons8_french_press.svg"
+                                            loading="lazy"
+                                            data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Cafetiere%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                            data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                            alt="Espresso"
+                                            class="option-icon w-condition-invisible"
+                                        />
+                                        <img
+                                            src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c20e61c0d5ed08ebb49_icons8_coffee_beans.svg"
+                                            loading="lazy"
+                                            data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Wholebean%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                            data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                            alt="Espresso"
+                                            class="option-icon w-condition-invisible"
+                                        />
+                                        <img
+                                            src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c6232525838003e04fd_icons8_coffee_pot.svg"
+                                            loading="lazy"
+                                            data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Filter%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                            data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                            alt="Espresso"
+                                            class="option-icon w-condition-invisible"
+                                        />
+                                        <img
+                                            src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462cc8089494272693d772_icons8_cafe.svg"
+                                            loading="lazy"
+                                            data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Espresso%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                            data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                            alt="Espresso"
+                                            class="option-icon"
+                                        />
+                                        <div data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D">
+                                            Espresso
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add-to-cart-row">
+                            <input
+                                type="number"
+                                pattern="^[0-9]+$"
+                                inputmode="numeric"
+                                id="quantity-9cebce7ccb50c32234a663f6ac3abe1e"
+                                name="commerce-add-to-cart-quantity-input"
+                                min="1"
+                                class="w-commerce-commerceaddtocartquantityinput quantity"
+                                value="1"
+                            />
+                            <input
+                                type="submit"
+                                data-node-type="commerce-add-to-cart-button"
+                                data-loading-text="Adding to cart..."
+                                value="Add to Cart"
+                                aria-busy="false"
+                                aria-haspopup="dialog"
+                                class="w-commerce-commerceaddtocartbutton add-to-cart-button"
+                            />
+                            <a
+                                data-node-type="commerce-buy-now-button"
+                                data-default-text="Buy now"
+                                data-subscription-text="Subscribe now"
+                                aria-busy="false"
+                                aria-haspopup="false"
+                                class="w-commerce-commercebuynowbutton buy-now-button"
+                                href="../checkout.html"
+                            >
+                                Buy now
+                            </a>
+                        </div>
+                    </form>
+                    <div style="display: none;" class="w-commerce-commerceaddtocartoutofstock error-state">
+                        <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6048a70f30f0076051c87868_icons8_error.svg" loading="lazy" alt="Alert Icon" class="error-icon" />
+                        <div>This product is out of stock.</div>
+                    </div>
+                    <div data-node-type="commerce-add-to-cart-error" style="display: none;" class="w-commerce-commerceaddtocarterror error-state">
+                        <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6048a70f30f0076051c87868_icons8_error.svg" loading="lazy" alt="Alert Icon" class="error-icon" />
+                        <div
+                            data-node-type="commerce-add-to-cart-error"
+                            class="error-message"
+                            data-w-add-to-cart-quantity-error="Product is not available in this quantity."
+                            data-w-add-to-cart-general-error="Something went wrong when adding this item to the cart."
+                            data-w-add-to-cart-mixed-cart-error="You can’t purchase another product with a subscription."
+                            data-w-add-to-cart-buy-now-error="Something went wrong when trying to purchase this item."
+                            data-w-add-to-cart-checkout-disabled-error="Checkout is disabled on this site."
+                            data-w-add-to-cart-select-all-options-error="Please select a Grind Style option."
+                        >
+                            Product is not available in this quantity.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="w-node-_1db91a05-ca32-50dc-ecae-f262ffcf4f5a-80d3ee25" class="product-template-grid-image-column">
+                <img
+                    src="{{ object.image.url }}"
+                    loading="lazy"
+                    alt="{{ object.name }}"
+                    sizes="(max-width: 479px) 57vw, (max-width: 767px) 56vw, (max-width: 991px) 37vw, 360px"
+                    class="product-template-image"
+                />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container crest-container">
+    <img
+        src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6047437a9190494d15914da8_Crest Teal.svg"
+        loading="lazy"
+        style="
+            -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);
+            -moz-transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);
+            -ms-transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);
+            transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);
+        "
+        alt=""
+        class="crest-section-splitter"
+    />
+</div>
+<div class="section other-products wf-section">
+    <div class="container">
+        <h2 class="no-margin-top center">Other products you may like</h2>
+        <div class="w-dyn-list">
+            <div role="list" class="shop-grid w-dyn-items">
+                <div role="listitem" class="product-card w-dyn-item">
+                    <a href="house-roast-decaf.html" class="product-card-image-link w-inline-block">
+                        <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60474cf056321879bd114c0b_Map Teal.svg" loading="lazy" alt="" class="product-card-image-background" />
+                        <img
+                            src="https://assets.website-files.com/60460c8d35f3581d68d3ee1c/604621e9242373b59130cc37_smartmockups_km0hre68 Compressed DECAF.png"
+                            data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                            alt="House Roast Decaf"
+                            sizes="(max-width: 479px) 67vw, (max-width: 767px) 130px, (max-width: 991px) 17vw, (max-width: 1279px) 160px, 210px"
+                            srcset="
+                                https://assets.website-files.com/60460c8d35f3581d68d3ee1c/604621e9242373b59130cc37_smartmockups_km0hre68%20Compressed%20DECAF-p-500.png 500w,
+                                https://assets.website-files.com/60460c8d35f3581d68d3ee1c/604621e9242373b59130cc37_smartmockups_km0hre68%20Compressed%20DECAF.png       902w
+                            "
+                            class="hero-product-image sub-product"
+                        />
+                    </a>
+                    <a href="house-roast-decaf.html" class="product-card-title white w-inline-block">
+                        <div>{{ object.name }}</div>
+                    </a>
+                    <div class="bag-size-row">
+                        <div class="bag-size-text">Size</div>
+                        <div class="bag-size-text">{{ object.volume }}</div>
+                        <div class="bag-size-text">{{ object.unit }}</div>
+                    </div>
+                    <p class="product-card-description">{{ object.description|safe }}</p>
+                    <div>
+                        <form
+                            data-node-type="commerce-add-to-cart-form"
+                            data-commerce-sku-id="604621f2890e9a11fa5d2d98"
+                            data-loading-text="Adding to cart..."
+                            data-commerce-product-id="604621f236170135de13857d"
+                            class="w-commerce-commerceaddtocartform add-to-cart-wrapper"
+                        >
+                            <div
+                                data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_sku_values_3dr%22%2C%22to%22%3A%22optionValues%22%7D%5D"
+                                data-commerce-product-sku-values="%7B%22fafcab02c37ade1e11938169d987556d%22%3A%22ec9bf61390186c1a64bf9de99046a673%22%7D"
+                                data-node-type="commerce-add-to-cart-option-list"
+                                data-commerce-product-id="604621f236170135de13857d"
+                                data-preselect-default-variant="false"
+                                class="product-option-list"
+                                role="group"
+                            >
+                                <div role="group">
+                                    <div
+                                        id="option-set-fafcab02c37ade1e11938169d987556d"
+                                        data-node-type="commerce-add-to-cart-pill-group"
+                                        data-commerce-option-set-id="fafcab02c37ade1e11938169d987556d"
+                                        class="w-commerce-commerceaddtocartoptionpillgroup button-group"
+                                        role="radiogroup"
+                                        aria-label="Grind Style"
+                                    >
+                                        <div
+                                            data-node-type="commerce-add-to-cart-pill"
+                                            class="w-commerce-commerceaddtocartoptionpill option-button other-products"
+                                            role="radio"
+                                            aria-checked="false"
+                                            aria-disabled="false"
+                                            tabindex="-1"
+                                            data-option-id="ec9bf61390186c1a64bf9de99046a673"
+                                        >
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c2ba41e5eca96292318_icons8_french_press.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Cafetiere%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Wholebean"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c20e61c0d5ed08ebb49_icons8_coffee_beans.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Wholebean%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Wholebean"
+                                                class="option-icon white"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c6232525838003e04fd_icons8_coffee_pot.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Filter%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Wholebean"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462cc8089494272693d772_icons8_cafe.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Espresso%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Wholebean"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <div data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D">
+                                                Wholebean
+                                            </div>
+                                        </div>
+                                        <div
+                                            data-node-type="commerce-add-to-cart-pill"
+                                            class="w-commerce-commerceaddtocartoptionpill option-button other-products"
+                                            role="radio"
+                                            aria-checked="false"
+                                            aria-disabled="false"
+                                            tabindex="-1"
+                                            data-option-id="3f588c999ffc86d9d5b6ca538084a46d"
+                                        >
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c2ba41e5eca96292318_icons8_french_press.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Cafetiere%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Cafetiere"
+                                                class="option-icon white"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c20e61c0d5ed08ebb49_icons8_coffee_beans.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Wholebean%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Cafetiere"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c6232525838003e04fd_icons8_coffee_pot.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Filter%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Cafetiere"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462cc8089494272693d772_icons8_cafe.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Espresso%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Cafetiere"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <div data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D">
+                                                Cafetiere
+                                            </div>
+                                        </div>
+                                        <div
+                                            data-node-type="commerce-add-to-cart-pill"
+                                            class="w-commerce-commerceaddtocartoptionpill option-button other-products"
+                                            role="radio"
+                                            aria-checked="false"
+                                            aria-disabled="false"
+                                            tabindex="-1"
+                                            data-option-id="5ba0cfd6139ba979edc48eb5274888d1"
+                                        >
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c2ba41e5eca96292318_icons8_french_press.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Cafetiere%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Filter"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c20e61c0d5ed08ebb49_icons8_coffee_beans.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Wholebean%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Filter"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c6232525838003e04fd_icons8_coffee_pot.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Filter%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Filter"
+                                                class="option-icon white"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462cc8089494272693d772_icons8_cafe.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Espresso%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Filter"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <div data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D">
+                                                Filter
+                                            </div>
+                                        </div>
+                                        <div
+                                            data-node-type="commerce-add-to-cart-pill"
+                                            class="w-commerce-commerceaddtocartoptionpill option-button other-products"
+                                            role="radio"
+                                            aria-checked="false"
+                                            aria-disabled="false"
+                                            tabindex="-1"
+                                            data-option-id="2ed07891f361fe31256906b015c60100"
+                                        >
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c2ba41e5eca96292318_icons8_french_press.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Cafetiere%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Espresso"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c20e61c0d5ed08ebb49_icons8_coffee_beans.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Wholebean%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Espresso"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c6232525838003e04fd_icons8_coffee_pot.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Filter%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Espresso"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462cc8089494272693d772_icons8_cafe.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Espresso%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Espresso"
+                                                class="option-icon white"
+                                            />
+                                            <div data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D">
+                                                Espresso
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="add-to-cart-row">
+                                <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D" class="product-card-price">$ 6.95 USD</div>
+                                <input
+                                    type="number"
+                                    pattern="^[0-9]+$"
+                                    inputmode="numeric"
+                                    id="quantity-9cebce7ccb50c32234a663f6ac3abe1e"
+                                    name="commerce-add-to-cart-quantity-input"
+                                    min="1"
+                                    class="w-commerce-commerceaddtocartquantityinput quantity"
+                                    value="1"
+                                />
+                                <input
+                                    type="submit"
+                                    data-node-type="commerce-add-to-cart-button"
+                                    data-loading-text="Adding to cart..."
+                                    value="Add to Cart"
+                                    aria-busy="false"
+                                    aria-haspopup="dialog"
+                                    class="w-commerce-commerceaddtocartbutton add-to-cart-button"
+                                />
+                                <a
+                                    data-node-type="commerce-buy-now-button"
+                                    data-default-text="Buy now"
+                                    data-subscription-text="Subscribe now"
+                                    aria-busy="false"
+                                    aria-haspopup="false"
+                                    class="w-commerce-commercebuynowbutton buy-now-button"
+                                    href="../checkout.html"
+                                >
+                                    Buy now
+                                </a>
+                            </div>
+                        </form>
+                        <div style="display: none;" class="w-commerce-commerceaddtocartoutofstock error-state">
+                            <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6048a70f30f0076051c87868_icons8_error.svg" loading="lazy" alt="Alert Icon" class="error-icon" />
+                            <div>This product is out of stock.</div>
+                        </div>
+                        <div data-node-type="commerce-add-to-cart-error" style="display: none;" class="w-commerce-commerceaddtocarterror error-state">
+                            <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6048a70f30f0076051c87868_icons8_error.svg" loading="lazy" alt="Alert Icon" class="error-icon" />
+                            <div
+                                data-node-type="commerce-add-to-cart-error"
+                                class="error-message"
+                                data-w-add-to-cart-quantity-error="Product is not available in this quantity."
+                                data-w-add-to-cart-general-error="Something went wrong when adding this item to the cart."
+                                data-w-add-to-cart-mixed-cart-error="You can’t purchase another product with a subscription."
+                                data-w-add-to-cart-buy-now-error="Something went wrong when trying to purchase this item."
+                                data-w-add-to-cart-checkout-disabled-error="Checkout is disabled on this site."
+                                data-w-add-to-cart-select-all-options-error="Please select a Grind Style option."
+                            >
+                                Product is not available in this quantity.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="listitem" class="product-card w-dyn-item">
+                    <a href="famous-roast-decaf.html" aria-current="page" class="product-card-image-link w-inline-block w--current">
+                        <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60474cf056321879bd114c0b_Map Teal.svg" loading="lazy" alt="" class="product-card-image-background" />
+                        <img
+                            src="https://assets.website-files.com/60460c8d35f3581d68d3ee1c/6046218fa41e5e8a1428f572_smartmockups_km0hye83 Compressed DECAF.png"
+                            data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                            alt="Famous Roast Decaf"
+                            sizes="(max-width: 479px) 67vw, (max-width: 767px) 130px, (max-width: 991px) 17vw, (max-width: 1279px) 160px, 210px"
+                            srcset="
+                                https://assets.website-files.com/60460c8d35f3581d68d3ee1c/6046218fa41e5e8a1428f572_smartmockups_km0hye83%20Compressed%20DECAF-p-500.png 500w,
+                                https://assets.website-files.com/60460c8d35f3581d68d3ee1c/6046218fa41e5e8a1428f572_smartmockups_km0hye83%20Compressed%20DECAF.png       971w
+                            "
+                            class="hero-product-image sub-product"
+                        />
+                    </a>
+                    <a href="famous-roast-decaf.html" aria-current="page" class="product-card-title white w-inline-block w--current">
+                        <div>Famous Roast Decaf</div>
+                    </a>
+                    <div class="bag-size-row">
+                        <div class="bag-size-text">Size</div>
+                        <div class="bag-size-text">250</div>
+                        <div class="bag-size-text">g</div>
+                    </div>
+                    <p class="product-card-description">A deliciously smooth coffee made from speciality Arabica beans from Guatemala grown in the volcanic soils of tropical valleys and beans from Cerrado Minas Gerais in Brazil.</p>
+                    <div>
+                        <form
+                            data-node-type="commerce-add-to-cart-form"
+                            data-commerce-sku-id="604621d7da72bdb92a8182ce"
+                            data-loading-text="Adding to cart..."
+                            data-commerce-product-id="604621d7a161ad907614f0db"
+                            class="w-commerce-commerceaddtocartform add-to-cart-wrapper"
+                        >
+                            <div
+                                data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_sku_values_3dr%22%2C%22to%22%3A%22optionValues%22%7D%5D"
+                                data-commerce-product-sku-values="%7B%22abd2b1c930eba711d885c67dd465e345%22%3A%22232caafa5f7beaf65b9384c4ff91a6aa%22%7D"
+                                data-node-type="commerce-add-to-cart-option-list"
+                                data-commerce-product-id="604621d7a161ad907614f0db"
+                                data-preselect-default-variant="false"
+                                class="product-option-list"
+                                role="group"
+                            >
+                                <div role="group">
+                                    <div
+                                        id="option-set-abd2b1c930eba711d885c67dd465e345"
+                                        data-node-type="commerce-add-to-cart-pill-group"
+                                        data-commerce-option-set-id="abd2b1c930eba711d885c67dd465e345"
+                                        class="w-commerce-commerceaddtocartoptionpillgroup button-group"
+                                        role="radiogroup"
+                                        aria-label="Grind Style"
+                                    >
+                                        <div
+                                            data-node-type="commerce-add-to-cart-pill"
+                                            class="w-commerce-commerceaddtocartoptionpill option-button other-products"
+                                            role="radio"
+                                            aria-checked="false"
+                                            aria-disabled="false"
+                                            tabindex="-1"
+                                            data-option-id="232caafa5f7beaf65b9384c4ff91a6aa"
+                                        >
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c2ba41e5eca96292318_icons8_french_press.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Cafetiere%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Wholebean"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c20e61c0d5ed08ebb49_icons8_coffee_beans.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Wholebean%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Wholebean"
+                                                class="option-icon white"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c6232525838003e04fd_icons8_coffee_pot.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Filter%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Wholebean"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462cc8089494272693d772_icons8_cafe.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Espresso%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Wholebean"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <div data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D">
+                                                Wholebean
+                                            </div>
+                                        </div>
+                                        <div
+                                            data-node-type="commerce-add-to-cart-pill"
+                                            class="w-commerce-commerceaddtocartoptionpill option-button other-products"
+                                            role="radio"
+                                            aria-checked="false"
+                                            aria-disabled="false"
+                                            tabindex="-1"
+                                            data-option-id="ea99b16dd5756d872241961c37d87765"
+                                        >
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c2ba41e5eca96292318_icons8_french_press.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Cafetiere%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Cafetiere"
+                                                class="option-icon white"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c20e61c0d5ed08ebb49_icons8_coffee_beans.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Wholebean%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Cafetiere"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c6232525838003e04fd_icons8_coffee_pot.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Filter%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Cafetiere"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462cc8089494272693d772_icons8_cafe.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Espresso%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Cafetiere"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <div data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D">
+                                                Cafetiere
+                                            </div>
+                                        </div>
+                                        <div
+                                            data-node-type="commerce-add-to-cart-pill"
+                                            class="w-commerce-commerceaddtocartoptionpill option-button other-products"
+                                            role="radio"
+                                            aria-checked="false"
+                                            aria-disabled="false"
+                                            tabindex="-1"
+                                            data-option-id="78f9cc7f8cc4b898de7625ac8d070c2b"
+                                        >
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c2ba41e5eca96292318_icons8_french_press.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Cafetiere%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Filter"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c20e61c0d5ed08ebb49_icons8_coffee_beans.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Wholebean%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Filter"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c6232525838003e04fd_icons8_coffee_pot.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Filter%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Filter"
+                                                class="option-icon white"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462cc8089494272693d772_icons8_cafe.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Espresso%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Filter"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <div data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D">
+                                                Filter
+                                            </div>
+                                        </div>
+                                        <div
+                                            data-node-type="commerce-add-to-cart-pill"
+                                            class="w-commerce-commerceaddtocartoptionpill option-button other-products"
+                                            role="radio"
+                                            aria-checked="false"
+                                            aria-disabled="false"
+                                            tabindex="-1"
+                                            data-option-id="992023b545e5415e2157810ef76e2a71"
+                                        >
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c2ba41e5eca96292318_icons8_french_press.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Cafetiere%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Espresso"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c20e61c0d5ed08ebb49_icons8_coffee_beans.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Wholebean%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Espresso"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c6232525838003e04fd_icons8_coffee_pot.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Filter%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Espresso"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462cc8089494272693d772_icons8_cafe.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Espresso%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Espresso"
+                                                class="option-icon white"
+                                            />
+                                            <div data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D">
+                                                Espresso
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="add-to-cart-row">
+                                <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D" class="product-card-price">$ 8.95 USD</div>
+                                <input
+                                    type="number"
+                                    pattern="^[0-9]+$"
+                                    inputmode="numeric"
+                                    id="quantity-9cebce7ccb50c32234a663f6ac3abe1e"
+                                    name="commerce-add-to-cart-quantity-input"
+                                    min="1"
+                                    class="w-commerce-commerceaddtocartquantityinput quantity"
+                                    value="1"
+                                />
+                                <input
+                                    type="submit"
+                                    data-node-type="commerce-add-to-cart-button"
+                                    data-loading-text="Adding to cart..."
+                                    value="Add to Cart"
+                                    aria-busy="false"
+                                    aria-haspopup="dialog"
+                                    class="w-commerce-commerceaddtocartbutton add-to-cart-button"
+                                />
+                                <a
+                                    data-node-type="commerce-buy-now-button"
+                                    data-default-text="Buy now"
+                                    data-subscription-text="Subscribe now"
+                                    aria-busy="false"
+                                    aria-haspopup="false"
+                                    class="w-commerce-commercebuynowbutton buy-now-button"
+                                    href="../checkout.html"
+                                >
+                                    Buy now
+                                </a>
+                            </div>
+                        </form>
+                        <div style="display: none;" class="w-commerce-commerceaddtocartoutofstock error-state">
+                            <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6048a70f30f0076051c87868_icons8_error.svg" loading="lazy" alt="Alert Icon" class="error-icon" />
+                            <div>This product is out of stock.</div>
+                        </div>
+                        <div data-node-type="commerce-add-to-cart-error" style="display: none;" class="w-commerce-commerceaddtocarterror error-state">
+                            <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6048a70f30f0076051c87868_icons8_error.svg" loading="lazy" alt="Alert Icon" class="error-icon" />
+                            <div
+                                data-node-type="commerce-add-to-cart-error"
+                                class="error-message"
+                                data-w-add-to-cart-quantity-error="Product is not available in this quantity."
+                                data-w-add-to-cart-general-error="Something went wrong when adding this item to the cart."
+                                data-w-add-to-cart-mixed-cart-error="You can’t purchase another product with a subscription."
+                                data-w-add-to-cart-buy-now-error="Something went wrong when trying to purchase this item."
+                                data-w-add-to-cart-checkout-disabled-error="Checkout is disabled on this site."
+                                data-w-add-to-cart-select-all-options-error="Please select a Grind Style option."
+                            >
+                                Product is not available in this quantity.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="listitem" class="product-card w-dyn-item">
+                    <a href="character-roast-decaf.html" class="product-card-image-link w-inline-block">
+                        <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60474cf056321879bd114c0b_Map Teal.svg" loading="lazy" alt="" class="product-card-image-background" />
+                        <img
+                            src="https://assets.website-files.com/60460c8d35f3581d68d3ee1c/6046217a85187d0b42bd2f2e_smartmockups_km0i1nwu Compressed DECAF.png"
+                            data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                            alt="Character Roast Decaf"
+                            class="hero-product-image sub-product"
+                        />
+                    </a>
+                    <a href="character-roast-decaf.html" class="product-card-title white w-inline-block">
+                        <div>Character Roast Decaf</div>
+                    </a>
+                    <div class="bag-size-row">
+                        <div class="bag-size-text">Size</div>
+                        <div class="bag-size-text">250</div>
+                        <div class="bag-size-text">g</div>
+                    </div>
+                    <p class="product-card-description">
+                        A beautiful coffee from the famous coffee growing region of Cerrado Minas Gerais. Brazil is the largest producer of coffee and sets standards for the quality of growing, harvesting and processing of amazing coffee.
+                    </p>
+                    <div>
+                        <form
+                            data-node-type="commerce-add-to-cart-form"
+                            data-commerce-sku-id="60462180291af8795e3f12a8"
+                            data-loading-text="Adding to cart..."
+                            data-commerce-product-id="6046217fbc5a3eaeec5594bb"
+                            class="w-commerce-commerceaddtocartform add-to-cart-wrapper"
+                        >
+                            <div
+                                data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_sku_values_3dr%22%2C%22to%22%3A%22optionValues%22%7D%5D"
+                                data-commerce-product-sku-values="%7B%226c5cc8b9bf3f0c50818e1e650910338e%22%3A%22fdc89587e84c8e2c6f429f8e37ad55b2%22%7D"
+                                data-node-type="commerce-add-to-cart-option-list"
+                                data-commerce-product-id="6046217fbc5a3eaeec5594bb"
+                                data-preselect-default-variant="false"
+                                class="product-option-list"
+                                role="group"
+                            >
+                                <div role="group">
+                                    <div
+                                        id="option-set-6c5cc8b9bf3f0c50818e1e650910338e"
+                                        data-node-type="commerce-add-to-cart-pill-group"
+                                        data-commerce-option-set-id="6c5cc8b9bf3f0c50818e1e650910338e"
+                                        class="w-commerce-commerceaddtocartoptionpillgroup button-group"
+                                        role="radiogroup"
+                                        aria-label="Grind Style"
+                                    >
+                                        <div
+                                            data-node-type="commerce-add-to-cart-pill"
+                                            class="w-commerce-commerceaddtocartoptionpill option-button other-products"
+                                            role="radio"
+                                            aria-checked="false"
+                                            aria-disabled="false"
+                                            tabindex="-1"
+                                            data-option-id="fdc89587e84c8e2c6f429f8e37ad55b2"
+                                        >
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c2ba41e5eca96292318_icons8_french_press.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Cafetiere%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Wholebean"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c20e61c0d5ed08ebb49_icons8_coffee_beans.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Wholebean%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Wholebean"
+                                                class="option-icon white"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c6232525838003e04fd_icons8_coffee_pot.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Filter%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Wholebean"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462cc8089494272693d772_icons8_cafe.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Espresso%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Wholebean"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <div data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D">
+                                                Wholebean
+                                            </div>
+                                        </div>
+                                        <div
+                                            data-node-type="commerce-add-to-cart-pill"
+                                            class="w-commerce-commerceaddtocartoptionpill option-button other-products"
+                                            role="radio"
+                                            aria-checked="false"
+                                            aria-disabled="false"
+                                            tabindex="-1"
+                                            data-option-id="013ad18f02e30f2156ddd274634454dc"
+                                        >
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c2ba41e5eca96292318_icons8_french_press.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Cafetiere%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Cafetiere"
+                                                class="option-icon white"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c20e61c0d5ed08ebb49_icons8_coffee_beans.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Wholebean%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Cafetiere"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c6232525838003e04fd_icons8_coffee_pot.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Filter%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Cafetiere"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462cc8089494272693d772_icons8_cafe.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Espresso%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Cafetiere"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <div data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D">
+                                                Cafetiere
+                                            </div>
+                                        </div>
+                                        <div
+                                            data-node-type="commerce-add-to-cart-pill"
+                                            class="w-commerce-commerceaddtocartoptionpill option-button other-products"
+                                            role="radio"
+                                            aria-checked="false"
+                                            aria-disabled="false"
+                                            tabindex="-1"
+                                            data-option-id="9440a80d72e4ff666ac518dde8985bb1"
+                                        >
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c2ba41e5eca96292318_icons8_french_press.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Cafetiere%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Filter"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c20e61c0d5ed08ebb49_icons8_coffee_beans.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Wholebean%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Filter"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c6232525838003e04fd_icons8_coffee_pot.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Filter%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Filter"
+                                                class="option-icon white"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462cc8089494272693d772_icons8_cafe.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Espresso%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Filter"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <div data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D">
+                                                Filter
+                                            </div>
+                                        </div>
+                                        <div
+                                            data-node-type="commerce-add-to-cart-pill"
+                                            class="w-commerce-commerceaddtocartoptionpill option-button other-products"
+                                            role="radio"
+                                            aria-checked="false"
+                                            aria-disabled="false"
+                                            tabindex="-1"
+                                            data-option-id="008c021117e0a642aced34babf32be28"
+                                        >
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c2ba41e5eca96292318_icons8_french_press.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Cafetiere%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Espresso"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c20e61c0d5ed08ebb49_icons8_coffee_beans.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Wholebean%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Espresso"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462c6232525838003e04fd_icons8_coffee_pot.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Filter%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Espresso"
+                                                class="option-icon white w-condition-invisible"
+                                            />
+                                            <img
+                                                src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462cc8089494272693d772_icons8_cafe.svg"
+                                                loading="lazy"
+                                                data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22name%22%3A%7B%22eq%22%3A%22Espresso%22%2C%22type%22%3A%22PlainText%22%7D%7D%7D%2C%22dataPath%22%3A%22%22%7D"
+                                                data-wf-bindings="%5B%7B%22alt%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                                alt="Espresso"
+                                                class="option-icon white"
+                                            />
+                                            <div data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D">
+                                                Espresso
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="add-to-cart-row">
+                                <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D" class="product-card-price">$ 8.95 USD</div>
+                                <input
+                                    type="number"
+                                    pattern="^[0-9]+$"
+                                    inputmode="numeric"
+                                    id="quantity-9cebce7ccb50c32234a663f6ac3abe1e"
+                                    name="commerce-add-to-cart-quantity-input"
+                                    min="1"
+                                    class="w-commerce-commerceaddtocartquantityinput quantity"
+                                    value="1"
+                                />
+                                <input
+                                    type="submit"
+                                    data-node-type="commerce-add-to-cart-button"
+                                    data-loading-text="Adding to cart..."
+                                    value="Add to Cart"
+                                    aria-busy="false"
+                                    aria-haspopup="dialog"
+                                    class="w-commerce-commerceaddtocartbutton add-to-cart-button"
+                                />
+                                <a
+                                    data-node-type="commerce-buy-now-button"
+                                    data-default-text="Buy now"
+                                    data-subscription-text="Subscribe now"
+                                    aria-busy="false"
+                                    aria-haspopup="false"
+                                    class="w-commerce-commercebuynowbutton buy-now-button"
+                                    href="../checkout.html"
+                                >
+                                    Buy now
+                                </a>
+                            </div>
+                        </form>
+                        <div style="display: none;" class="w-commerce-commerceaddtocartoutofstock error-state">
+                            <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6048a70f30f0076051c87868_icons8_error.svg" loading="lazy" alt="Alert Icon" class="error-icon" />
+                            <div>This product is out of stock.</div>
+                        </div>
+                        <div data-node-type="commerce-add-to-cart-error" style="display: none;" class="w-commerce-commerceaddtocarterror error-state">
+                            <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6048a70f30f0076051c87868_icons8_error.svg" loading="lazy" alt="Alert Icon" class="error-icon" />
+                            <div
+                                data-node-type="commerce-add-to-cart-error"
+                                class="error-message"
+                                data-w-add-to-cart-quantity-error="Product is not available in this quantity."
+                                data-w-add-to-cart-general-error="Something went wrong when adding this item to the cart."
+                                data-w-add-to-cart-mixed-cart-error="You can’t purchase another product with a subscription."
+                                data-w-add-to-cart-buy-now-error="Something went wrong when trying to purchase this item."
+                                data-w-add-to-cart-checkout-disabled-error="Checkout is disabled on this site."
+                                data-w-add-to-cart-select-all-options-error="Please select a Grind Style option."
+                            >
+                                Product is not available in this quantity.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div data-w-id="f603888e-00dc-d4a2-5417-1647e013f3c9" class="section coffee-club wf-section">
+    <div class="container mini">
+        <div class="w-layout-grid coffee-club-grid">
+            <div id="w-node-f603888e-00dc-d4a2-5417-1647e013f3cc-e013f3c9" class="coffee-club-image-wrapper">
+                <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60489a4c03d00c72ba3fb9f3_smartmockups_km3a1wdi Compressed.png" loading="lazy" data-w-id="f603888e-00dc-d4a2-5417-1647e013f3cd" alt="" />
+            </div>
+            <div>
+                <h1 class="no-margin-top">Join <span class="pink">Coffee Club</span></h1>
+                <p>If you love our Coffee, you’ll love our Coffee Club. Get 100 free points on us when you join and you&#x27;ll earn points on every purchase.<br /></p>
+                <div class="app-link-row">
+                    <a href="https://play.google.com/store" target="_blank" class="app-link w-inline-block">
+                        <img
+                            src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60489b218f2257efd795c711_1200px-Google_Play_Store_badge_EN.svg.png"
+                            loading="lazy"
+                            sizes="100vw"
+                            srcset="
+                                https://assets.website-files.com/60366f34aa47ec600cc3023c/60489b218f2257efd795c711_1200px-Google_Play_Store_badge_EN.svg-p-500.png   500w,
+                                https://assets.website-files.com/60366f34aa47ec600cc3023c/60489b218f2257efd795c711_1200px-Google_Play_Store_badge_EN.svg-p-800.png   800w,
+                                https://assets.website-files.com/60366f34aa47ec600cc3023c/60489b218f2257efd795c711_1200px-Google_Play_Store_badge_EN.svg-p-1080.png 1080w,
+                                https://assets.website-files.com/60366f34aa47ec600cc3023c/60489b218f2257efd795c711_1200px-Google_Play_Store_badge_EN.svg.png        1200w
+                            "
+                            alt="Play Store Button"
+                        />
+                    </a>
+                    <a href="https://www.apple.com/uk/app-store/" target="_blank" class="app-link w-inline-block">
+                        <img
+                            src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60489bb055ba131628e08130_badge-example-preferred_2x.png"
+                            loading="lazy"
+                            sizes="100vw"
+                            srcset="
+                                https://assets.website-files.com/60366f34aa47ec600cc3023c/60489bb055ba131628e08130_badge-example-preferred_2x-p-500.png   500w,
+                                https://assets.website-files.com/60366f34aa47ec600cc3023c/60489bb055ba131628e08130_badge-example-preferred_2x-p-800.png   800w,
+                                https://assets.website-files.com/60366f34aa47ec600cc3023c/60489bb055ba131628e08130_badge-example-preferred_2x-p-1080.png 1080w,
+                                https://assets.website-files.com/60366f34aa47ec600cc3023c/60489bb055ba131628e08130_badge-example-preferred_2x-p-1600.png 1600w,
+                                https://assets.website-files.com/60366f34aa47ec600cc3023c/60489bb055ba131628e08130_badge-example-preferred_2x-p-2000.png 2000w,
+                                https://assets.website-files.com/60366f34aa47ec600cc3023c/60489bb055ba131628e08130_badge-example-preferred_2x-p-2600.png 2600w,
+                                https://assets.website-files.com/60366f34aa47ec600cc3023c/60489bb055ba131628e08130_badge-example-preferred_2x-p-3200.png 3200w,
+                                https://assets.website-files.com/60366f34aa47ec600cc3023c/60489bb055ba131628e08130_badge-example-preferred_2x.png        6905w
+                            "
+                            alt="App Store Button"
+                        />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,33 +1,19 @@
-{% load static %}
 <!DOCTYPE html>
-<html>
+<!-- This site was created in Webflow. https://www.webflow.com --><!-- Last Published: Sat Apr 10 2021 06:25:18 GMT+0000 (Coordinated Universal Time) -->
+<html data-wf-domain="barebeans.webflow.io" data-wf-page="604631fa9d8021478c30d87b" data-wf-site="60366f34aa47ec600cc3023c" data-wf-status="1">
     <head>
         <meta charset="utf-8" />
-        <title>{% block title %}{% endblock %}</title>
-        <meta
-            content="A fully fledged cafe, roastery, ecommerce Ui Kit. With over 30 custom pages and various bespoke components, this template features everything you need to start your coffee shop or coffee supply business it even has barista training and coffee shop courses."
-            name="description"
-        />
-        <meta content="Barebeans Coffee Shop - Webflow Ecommerce website template" property="og:title" />
-        <meta
-            content="A fully fledged cafe, roastery, ecommerce Ui Kit. With over 30 custom pages and various bespoke components, this template features everything you need to start your coffee shop or coffee supply business it even has barista training and coffee shop courses."
-            property="og:description"
-        />
-        <meta content="Barebeans Coffee Shop - Webflow Ecommerce website template" property="twitter:title" />
-        <meta
-            content="A fully fledged cafe, roastery, ecommerce Ui Kit. With over 30 custom pages and various bespoke components, this template features everything you need to start your coffee shop or coffee supply business it even has barista training and coffee shop courses."
-            property="twitter:description"
-        />
-        <meta property="og:type" content="website" />
-        <meta content="summary_large_image" name="twitter:card" />
+        <title>Barebeans</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="Webflow" name="generator" />
         <link href="https://assets.website-files.com/60366f34aa47ec600cc3023c/css/barebeans.webflow.53cb8b9c6.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
         <script type="text/javascript">
             WebFont.load({ google: { families: ["Fjalla One:regular", "EB Garamond:regular,500,600,700,800,italic,500italic,600italic,700italic,800italic"] } });
         </script>
-        <!--[if lt IE 9]> <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
+        <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
         <script type="text/javascript">
             !(function (o, c) {
                 var n = c.documentElement,
@@ -48,48 +34,11 @@
                 hideDecimalForWholeNumbers: false,
             };
         </script>
-        {% block extra_statics %}{% endblock %}
     </head>
     <body>
-        <div class="banner">
-            <div class="banner-container">
-                <div class="banner-row shout-outs">
-                    <div class="banner-column">
-                        <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/604c63733fdf208d162169b5_icons8_in_transit.svg" loading="lazy" alt="" class="banner-icon" />
-                        <div>Yetkazib berish xizmati</div>
-                    </div>
-                    <div class="banner-column">
-                        <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/604c6383690126296bcbdf1a_icons8_java_bean_1.svg" loading="lazy" alt="" class="banner-icon" />
-                        <div>Eng yangi texnologiyalar bilan filtrlangan</div>
-                    </div>
-                    <div class="banner-column">
-                        <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/604c639a21701380970c6f15_icons8_cursor.svg" loading="lazy" alt="" class="banner-icon" />
-                        <div>Uy va ofisslar uchun buyurtmalar berish</div>
-                    </div>
-                </div>
-                <div class="banner-row">
-                    <a href="tel:+440207896786" class="banner-column w-inline-block">
-                        <div class="banner-icon-wrapper">
-                            <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6048acf195d3bacac4b61b3d_icons8_iphone_x.svg" alt="" class="banner-icon" />
-                            <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/604c687263ae4405310b5bf7_icons8_iphone_x_3.svg" alt="" class="banner-icon" />
-                        </div>
-                        <div>+998 90 915 0172</div>
-                    </a>
-                    <a href="mailto:hey@barebeans.com" class="banner-column w-inline-block">
-                        <div class="banner-icon-wrapper">
-                            <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6048ace60cb9a3c58b7aecf2_icons8_important_mail.svg" alt="" class="banner-icon" />
-                            <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/604c686d260c2ccb5db1176c_icons8_important_mail_2.svg" alt="" class="banner-icon" />
-                        </div>
-                        <div>international-2014@mail.ru</div>
-                    </a>
-                </div>
-            </div>
-        </div>
         <div data-collapse="medium" data-animation="default" data-duration="400" data-w-id="fe3faf11-8463-0f8a-85c8-2a3b54f6c774" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
             <div class="nav-container">
-                <a href="{% url "home_page" %}" aria-current="page" class="brand w-nav-brand w--current">
-                    <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/604605a5e0158a689af81678_Logo Crest.svg" loading="lazy" alt="Coffee Shop Logo" />
-                </a>
+                <a href="/" class="brand w-nav-brand"><img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/604605a5e0158a689af81678_Logo%20Crest.svg" loading="lazy" alt="Coffee Shop Logo" /></a>
                 <div class="nav-menu-wrapper">
                     <nav role="navigation" class="nav-menu w-nav-menu">
                         <div data-hover="true" data-delay="200" class="dropdown-wrapper w-dropdown">
@@ -111,9 +60,9 @@
                                 ></div>
                             </div>
                             <nav class="dropdown-list w-dropdown-list">
-                                <a href="{% url "home_page" %}" aria-current="page" class="dropdown-link w-dropdown-link w--current">Home <span class="version-number">V1 (Retail)</span></a>
-                                <a href="home-version-two.html" class="dropdown-link w-dropdown-link">Home <span class="version-number">V2 (Wholesale)</span></a>
-                                <a href="home-version-three.html" class="dropdown-link w-dropdown-link">Home <span class="version-number">V3 (Café)</span></a>
+                                <a href="/" class="dropdown-link w-dropdown-link">Home <span class="version-number">V1 (Retail)</span></a>
+                                <a href="/home-version-two" class="dropdown-link w-dropdown-link">Home <span class="version-number">V2 (Wholesale)</span></a>
+                                <a href="/home-version-three" class="dropdown-link w-dropdown-link">Home <span class="version-number">V3 (Café)</span></a>
                             </nav>
                         </div>
                         <div data-hover="true" data-delay="200" class="dropdown-wrapper w-dropdown">
@@ -135,9 +84,9 @@
                                 ></div>
                             </div>
                             <nav class="dropdown-list w-dropdown-list">
-                                <a href="our-coffees.html" class="dropdown-link w-dropdown-link">Our Coffee&#x27;s <span class="version-number">V1</span></a>
-                                <a href="our-coffees-v2.html" class="dropdown-link w-dropdown-link">Our Coffee&#x27;s <span class="version-number">V2</span></a>
-                                <a href="our-coffees-v3.html" class="dropdown-link w-dropdown-link">Our Coffee&#x27;s <span class="version-number">V3</span></a>
+                                <a href="/our-coffees" class="dropdown-link w-dropdown-link">Our Coffee&#x27;s <span class="version-number">V1</span></a>
+                                <a href="/our-coffees-v2" class="dropdown-link w-dropdown-link">Our Coffee&#x27;s <span class="version-number">V2</span></a>
+                                <a href="/our-coffees-v3" class="dropdown-link w-dropdown-link">Our Coffee&#x27;s <span class="version-number">V3</span></a>
                             </nav>
                         </div>
                         <div data-hover="true" data-delay="200" class="dropdown-wrapper w-dropdown">
@@ -159,12 +108,11 @@
                                 ></div>
                             </div>
                             <nav class="dropdown-list w-dropdown-list">
-                                <a href="shop.html" class="dropdown-link w-dropdown-link">Shop <span class="version-number">V1</span></a>
-                                <a href="shop-v2.html" class="dropdown-link w-dropdown-link">Shop <span class="version-number">V2</span></a>
-                                <a href="shop-v3.html" class="dropdown-link w-dropdown-link">Shop <span class="version-number">V3</span></a>
+                                <a href="/shop" class="dropdown-link w-dropdown-link">Shop <span class="version-number">V1</span></a><a href="/shop-v2" class="dropdown-link w-dropdown-link">Shop <span class="version-number">V2</span></a>
+                                <a href="/shop-v3" class="dropdown-link w-dropdown-link">Shop <span class="version-number">V3</span></a>
                             </nav>
                         </div>
-                        <a href="our-locations.html" class="nav-link w-nav-link">Locations</a><a href="journal.html" class="nav-link w-nav-link">Journal</a><a href="contact.html" class="nav-link w-nav-link">Contact</a>
+                        <a href="/our-locations" class="nav-link w-nav-link">Locations</a><a href="/journal" class="nav-link w-nav-link">Journal</a><a href="/contact" class="nav-link w-nav-link">Contact</a>
                         <div data-hover="true" data-delay="200" class="dropdown-wrapper order w-dropdown">
                             <div class="nav-link order w-dropdown-toggle">
                                 <div>Order</div>
@@ -184,7 +132,7 @@
                                 ></div>
                             </div>
                             <nav class="dropdown-list order w-dropdown-list">
-                                <a href="http://www.justeat.com/" target="_blank" class="dropdown-order-link just-eat w-inline-block">
+                                <a href="http://www.justeat.com" target="_blank" class="dropdown-order-link just-eat w-inline-block">
                                     <img
                                         src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6068e2f609bea48e970ffcde_GoingOrange_1920x500.png"
                                         loading="lazy"
@@ -196,7 +144,7 @@
                                         alt=""
                                     />
                                 </a>
-                                <a href="http://www.ubereats.com/" target="_blank" class="dropdown-order-link w-inline-block">
+                                <a href="http://www.ubereats.com" target="_blank" class="dropdown-order-link w-inline-block">
                                     <img
                                         src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6068e2f316f3741b2a09bcb5_uber-eats-logo.png"
                                         loading="lazy"
@@ -218,9 +166,9 @@
                             </nav>
                         </div>
                         <div data-w-id="fc07a4e9-dd1e-4a53-474b-8898f75e233f" class="login-button-wrapper">
-                            <a href="log-in.html" class="nav-link login w-nav-link">Log in</a>
+                            <a href="/log-in" class="nav-link login w-nav-link">Log in</a>
                             <div class="tooltip-wrapper">
-                                <a href="sign-up" class="tooltip-link w-inline-block">
+                                <a href="/sign-up" class="tooltip-link w-inline-block">
                                     <div>Need an account? <strong>Sign up</strong></div>
                                 </a>
                             </div>
@@ -247,138 +195,143 @@
                         data-open-product=""
                         data-wf-cart-type="rightSidebar"
                         data-wf-cart-query="query Dynamo2 {
-                        database {
-                        id
-                        commerceOrder {
-                        comment
-                        extraItems {
-                        name
-                        pluginId
-                        pluginName
-                        price {
-                        value
-                        unit
-                        decimalValue
-                        string
-                        }
-                        }
-                        id
-                        startedOn
-                        statusFlags {
-                        hasDownloads
-                        hasSubscription
-                        isFreeOrder
-                        requiresShipping
-                        }
-                        subtotal {
-                        value
-                        unit
-                        decimalValue
-                        string
-                        }
-                        total {
-                        value
-                        unit
-                        decimalValue
-                        string
-                        }
-                        updatedOn
-                        userItems {
-                        count
-                        sku {
-                        f__draft_0ht
-                        f__archived_0ht
-                        f_main_image_4dr {
-                        url
-                        file {
-                        size
-                        origFileName
-                        createdOn
-                        updatedOn
-                        mimeType
-                        width
-                        height
-                        variants {
-                        origFileName
-                        quality
-                        height
-                        width
-                        s3Url
-                        error
-                        size
-                        }
-                        }
-                        alt
-                        }
-                        f_sku_values_3dr {
-                        property {
-                        id
-                        }
-                        value {
-                        id
-                        }
-                        }
-                        id
-                        }
-                        price {
-                        value
-                        unit
-                        decimalValue
-                        string
-                        }
-                        product {
-                        id
-                        f__draft_0ht
-                        f__archived_0ht
-                        f_name_
-                        f_sku_properties_3dr {
-                        id
-                        name
-                        enum {
-                        id
-                        name
-                        slug
-                        }
-                        }
-                        }
-                        id
-                        rowTotal {
-                        value
-                        unit
-                        decimalValue
-                        string
-                        }
-                        subscriptionFrequency
-                        subscriptionInterval
-                        subscriptionTrial
-                        }
-                        userItemsCount
-                        }
-                        }
-                        site {
-                        id
-                        commerce {
-                        businessAddress {
-                        country
-                        }
-                        defaultCountry
-                        defaultCurrency
-                        quickCheckoutEnabled
-                        }
-                        }
-                        }
-                        "
+  database {
+    id
+    commerceOrder {
+      comment
+      extraItems {
+        name
+        pluginId
+        pluginName
+        price {
+          value
+          unit
+          decimalValue
+          string
+        }
+      }
+      id
+      startedOn
+      statusFlags {
+        hasDownloads
+        hasSubscription
+        isFreeOrder
+        requiresShipping
+      }
+      subtotal {
+        value
+        unit
+        decimalValue
+        string
+      }
+      total {
+        value
+        unit
+        decimalValue
+        string
+      }
+      updatedOn
+      userItems {
+        count
+        sku {
+          f__draft_0ht
+          f__archived_0ht
+          f_main_image_4dr {
+            url
+            file {
+              size
+              origFileName
+              createdOn
+              updatedOn
+              mimeType
+              width
+              height
+              variants {
+                origFileName
+                quality
+                height
+                width
+                s3Url
+                error
+                size
+              }
+            }
+            alt
+          }
+          f_sku_values_3dr {
+            property {
+              id
+            }
+            value {
+              id
+            }
+          }
+          id
+        }
+        price {
+          value
+          unit
+          decimalValue
+          string
+        }
+        product {
+          id
+          f__draft_0ht
+          f__archived_0ht
+          f_name_
+          f_sku_properties_3dr {
+            id
+            name
+            enum {
+              id
+              name
+              slug
+            }
+          }
+        }
+        id
+        rowTotal {
+          value
+          unit
+          decimalValue
+          string
+        }
+        subscriptionFrequency
+        subscriptionInterval
+        subscriptionTrial
+      }
+      userItemsCount
+    }
+  }
+  site {
+    id
+    commerce {
+      businessAddress {
+        country
+      }
+      defaultCountry
+      defaultCurrency
+      quickCheckoutEnabled
+    }
+  }
+}
+"
                         data-wf-page-link-href-prefix=""
                         class="w-commerce-commercecartwrapper nav-cart"
                     >
                         <a href="#" data-node-type="commerce-cart-open-link" class="w-commerce-commercecartopenlink cart-button w-inline-block">
                             <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60462717e61c0d365a8ea129_icons8_shopping_cart_1.svg" loading="lazy" alt="Cart Icon" class="cart-icon" />
-                            <div class="w-commerce-commercecartopenlinkcount cart-quantity">0</div>
+                            <div
+                                data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22Number%22%2C%22filter%22%3A%7B%22type%22%3A%22numberPrecision%22%2C%22params%22%3A%5B%220%22%2C%22numberPrecision%22%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItemsCount%22%7D%7D%5D"
+                                class="w-commerce-commercecartopenlinkcount cart-quantity"
+                            >
+                                0
+                            </div>
                         </a>
                         <div data-node-type="commerce-cart-container-wrapper" style="display: none;" class="w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-rightSidebar">
                             <div data-node-type="commerce-cart-container" class="w-commerce-commercecartcontainer cart-container">
                                 <div class="w-commerce-commercecartheader cart-header">
-                                    <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6047437a9190494d15914da8_Crest Teal.svg" loading="lazy" alt="" class="cart-stamp" />
+                                    <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6047437a9190494d15914da8_Crest%20Teal.svg" loading="lazy" alt="" class="cart-stamp" />
                                     <div class="cart-title">Your Cart</div>
                                     <a href="#" data-node-type="commerce-cart-close-link" class="w-commerce-commercecartcloselink close-button w-inline-block">
                                         <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60586b77afeb6148641d4231_icons8_multiply.svg" loading="lazy" alt="Close Icon" />
@@ -393,7 +346,7 @@
                                             <div class="w-commerce-commercecartitem order-item">
                                                 <img
                                                     data-wf-bindings="%5B%7B%22src%22%3A%7B%22type%22%3A%22ImageRef%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.sku.f_main_image_4dr%22%7D%7D%5D"
-                                                    src="#"
+                                                    src=""
                                                     alt=""
                                                     class="w-commerce-commercecartitemimage order-item-image w-dyn-bind-empty"
                                                 />
@@ -524,18 +477,14 @@
                                                                     d="M7.8887,16 C10.0137,16 11.8107,15.289 13.1147,14.067 C13.1147,14.066 13.1157,14.065 13.1167,14.064 L10.5967,12.047 C10.5877,12.053 10.5807,12.061 10.5727,12.067 C9.8607,12.556 8.9507,12.833 7.8887,12.833 C5.8577,12.833 4.1387,11.457 3.4937,9.605 L0.8747,9.605 L0.8747,11.648 C2.2197,14.319 4.9287,16 7.8887,16"
                                                                 ></path>
                                                                 <g transform="translate(0 4)">
-                                                                    <mask id="google-mark-b" fill="#fff">
-                                                                        <use xlink:href="#google-mark-a"></use>
-                                                                    </mask>
+                                                                    <mask id="google-mark-b" fill="#fff"><use xlink:href="#google-mark-a"></use></mask>
                                                                     <path
                                                                         fill="#FBBC04"
                                                                         d="M3.4639,5.5337 C3.1369,4.5477 3.1359,3.4727 3.4609,2.4757 L3.4639,2.4777 C3.4679,2.4657 3.4749,2.4547 3.4789,2.4427 L3.4939,0.3287 L0.8939,0.3287 C0.8799,0.3577 0.8599,0.3827 0.8459,0.4117 C-0.2821,2.6667 -0.2821,5.3337 0.8459,7.5887 L0.8459,7.5997 C0.8549,7.6167 0.8659,7.6317 0.8749,7.6487 L3.4939,5.6057 C3.4849,5.5807 3.4729,5.5587 3.4639,5.5337"
                                                                         mask="url(#google-mark-b)"
                                                                     ></path>
                                                                 </g>
-                                                                <mask id="google-mark-d" fill="#fff">
-                                                                    <use xlink:href="#google-mark-c"></use>
-                                                                </mask>
+                                                                <mask id="google-mark-d" fill="#fff"><use xlink:href="#google-mark-c"></use></mask>
                                                                 <path
                                                                     fill="#EA4335"
                                                                     d="M0.894,4.3291 L3.478,6.4431 C4.113,4.5611 5.843,3.1671 7.889,3.1671 C9.018,3.1451 10.102,3.5781 10.912,4.3671 L13.169,2.0781 C11.733,0.7231 9.85,-0.0219 7.889,0.0001 C4.941,0.0001 2.245,1.6791 0.894,4.3291"
@@ -554,7 +503,7 @@
                                                         <div>Pay with browser.</div>
                                                     </a>
                                                 </div>
-                                                <a href="checkout.html" value="Continue to Checkout" data-node-type="cart-checkout-button" class="w-commerce-commercecartcheckoutbutton checkout-button" data-loading-text="Hang Tight...">
+                                                <a href="/checkout" value="Continue to Checkout" data-node-type="cart-checkout-button" class="w-commerce-commercecartcheckoutbutton checkout-button" data-loading-text="Hang Tight...">
                                                     Continue to Checkout
                                                 </a>
                                             </div>
@@ -562,7 +511,7 @@
                                     </form>
                                     <div class="w-commerce-commercecartemptystate empty-state">
                                         <div class="empty-state-title">There&#x27;s nothing in here!</div>
-                                        <a href="shop.html" class="button w-button">Take me to the shop!</a>
+                                        <a href="/shop" class="button w-button">Take me to the shop!</a>
                                     </div>
                                     <div style="display: none;" data-node-type="commerce-cart-error" class="w-commerce-commercecarterrorstate error-state cart">
                                         <div
@@ -583,78 +532,173 @@
                 </div>
             </div>
         </div>
-        {% block content %}{% endblock %}
+        <div class="section location-template wf-section">
+            <div class="container locations-template">
+                <div class="w-layout-grid location-template-grid">
+                    <div>
+                        <div class="location-title-wrapper">
+                            <h1 class="location-bare-beans">Bare Beans</h1>
+                            <h1 class="no-margin">Salisbury</h1>
+                        </div>
+                        <div class="location-subtitle w-condition-invisible">Coming soon</div>
+                        <div class="opening-soon-row w-condition-invisible">
+                            <div class="opening-soon-text fade">Opening</div>
+                            <div class="opening-soon-text w-dyn-bind-empty"></div>
+                            <div class="opening-soon-text fade">at</div>
+                            <div class="w-dyn-bind-empty"></div>
+                        </div>
+                        <div class="location-subtitle">Open hours</div>
+                        <div class="location-item-rich-text w-richtext">
+                            <p>Monday to Friday - 6am to 9pm</p>
+                            <p>Saturday to Sunday - 7am to 7pm</p>
+                        </div>
+                        <div class="location-subtitle">Get in touch</div>
+                        <a
+                            href="https://www.google.com/maps/place/Salisbury/@51.0797058,-1.8433629,13z/data=!3m1!4b1!4m5!3m4!1s0x48738c5536009bb7:0xda3e080f25eaa06!8m2!3d51.068785!4d-1.794472"
+                            target="_blank"
+                            class="location-details-link location-template w-inline-block"
+                        >
+                            <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6048a8b56fa450d9d0469146_icons8_marker.svg" loading="lazy" alt="" class="google-maps-icon" />
+                            <div>View on Google maps</div>
+                        </a>
+                        <a href="mailto:salisbury@barebeans.com" class="location-details-link location-template w-inline-block">
+                            <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6048ace60cb9a3c58b7aecf2_icons8_important_mail.svg" loading="lazy" alt="" class="google-maps-icon" />
+                            <div>salisbury@barebeans.com</div>
+                        </a>
+                        <a href="tel:+1152179122" class="location-details-link location-template w-inline-block">
+                            <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6048acf195d3bacac4b61b3d_icons8_iphone_x.svg" loading="lazy" alt="" class="google-maps-icon" />
+                            <div>+1 152 179 122</div>
+                        </a>
+                    </div>
+                    <div
+                        id="w-node-_7b8951b5-96fc-a053-d439-349ce562863f-8c30d87b"
+                        style="background-image: url('https://assets.website-files.com/60460c8d35f3581d68d3ee1c/604746db942ce4827290bd26_smartmockups_km0i2z2g%20Compressed.jpg');"
+                        class="location-template-image"
+                    >
+                        <div style="background-image: url('https://assets.website-files.com/60460c8d35f3581d68d3ee1c/604746db942ce4827290bd26_smartmockups_km0i2z2g%20Compressed.jpg');" class="location-image location-template">
+                            <div class="location-open-soon-title w-condition-invisible">Opening Soon</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container crest-container"><img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6047437a9190494d15914da8_Crest%20Teal.svg" loading="lazy" alt="" class="crest-section-splitter" /></div>
+        <div data-w-id="f603888e-00dc-d4a2-5417-1647e013f3c9" class="section coffee-club wf-section">
+            <div class="container mini">
+                <div class="w-layout-grid coffee-club-grid">
+                    <div id="w-node-f603888e-00dc-d4a2-5417-1647e013f3cc-e013f3c9" class="coffee-club-image-wrapper">
+                        <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60489a4c03d00c72ba3fb9f3_smartmockups_km3a1wdi%20Compressed.png" loading="lazy" data-w-id="f603888e-00dc-d4a2-5417-1647e013f3cd" alt="" />
+                    </div>
+                    <div>
+                        <h1 class="no-margin-top">Join <span class="pink">Coffee Club</span></h1>
+                        <p>If you love our Coffee, you’ll love our Coffee Club. Get 100 free points on us when you join and you&#x27;ll earn points on every purchase.<br /></p>
+                        <div class="app-link-row">
+                            <a href="https://play.google.com/store" target="_blank" class="app-link w-inline-block">
+                                <img
+                                    src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60489b218f2257efd795c711_1200px-Google_Play_Store_badge_EN.svg.png"
+                                    loading="lazy"
+                                    sizes="100vw"
+                                    srcset="
+                                        https://assets.website-files.com/60366f34aa47ec600cc3023c/60489b218f2257efd795c711_1200px-Google_Play_Store_badge_EN.svg-p-500.png   500w,
+                                        https://assets.website-files.com/60366f34aa47ec600cc3023c/60489b218f2257efd795c711_1200px-Google_Play_Store_badge_EN.svg-p-800.png   800w,
+                                        https://assets.website-files.com/60366f34aa47ec600cc3023c/60489b218f2257efd795c711_1200px-Google_Play_Store_badge_EN.svg-p-1080.png 1080w,
+                                        https://assets.website-files.com/60366f34aa47ec600cc3023c/60489b218f2257efd795c711_1200px-Google_Play_Store_badge_EN.svg.png        1200w
+                                    "
+                                    alt="Play Store Button"
+                                />
+                            </a>
+                            <a href="https://www.apple.com/uk/app-store/" target="_blank" class="app-link w-inline-block">
+                                <img
+                                    src="https://assets.website-files.com/60366f34aa47ec600cc3023c/60489bb055ba131628e08130_badge-example-preferred_2x.png"
+                                    loading="lazy"
+                                    sizes="100vw"
+                                    srcset="
+                                        https://assets.website-files.com/60366f34aa47ec600cc3023c/60489bb055ba131628e08130_badge-example-preferred_2x-p-500.png   500w,
+                                        https://assets.website-files.com/60366f34aa47ec600cc3023c/60489bb055ba131628e08130_badge-example-preferred_2x-p-800.png   800w,
+                                        https://assets.website-files.com/60366f34aa47ec600cc3023c/60489bb055ba131628e08130_badge-example-preferred_2x-p-1080.png 1080w,
+                                        https://assets.website-files.com/60366f34aa47ec600cc3023c/60489bb055ba131628e08130_badge-example-preferred_2x-p-1600.png 1600w,
+                                        https://assets.website-files.com/60366f34aa47ec600cc3023c/60489bb055ba131628e08130_badge-example-preferred_2x-p-2000.png 2000w,
+                                        https://assets.website-files.com/60366f34aa47ec600cc3023c/60489bb055ba131628e08130_badge-example-preferred_2x-p-2600.png 2600w,
+                                        https://assets.website-files.com/60366f34aa47ec600cc3023c/60489bb055ba131628e08130_badge-example-preferred_2x-p-3200.png 3200w,
+                                        https://assets.website-files.com/60366f34aa47ec600cc3023c/60489bb055ba131628e08130_badge-example-preferred_2x.png        6905w
+                                    "
+                                    alt="App Store Button"
+                                />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <footer id="footer" class="footer wf-section">
             <div class="container">
                 <div class="footer-flex-container">
-                    <a href="index.html" aria-current="page" class="footer-logo-link w-inline-block w--current">
-                        <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6047437a9190494d15914da8_Crest Teal.svg" alt="" class="footer-image" />
-                    </a>
+                    <a href="/" class="footer-logo-link w-inline-block"><img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6047437a9190494d15914da8_Crest%20Teal.svg" alt="" class="footer-image" /></a>
                     <div class="footer-column">
                         <h2 class="footer-heading">Navigate</h2>
                         <ul role="list" class="w-list-unstyled">
-                            <li><a href="index.html" aria-current="page" class="footer-link w--current">Home V1 (Retail)</a></li>
-                            <li><a href="home-version-two.html" class="footer-link">Home V2 (Wholesale)</a></li>
-                            <li><a href="home-version-three.html" class="footer-link">Home V3 (Café)</a></li>
-                            <li><a href="our-coffees.html" class="footer-link">Our Coffee&#x27;s V1</a></li>
-                            <li><a href="our-coffees-v2" class="footer-link">Our Coffee&#x27;s V2</a></li>
-                            <li><a href="our-coffees-v3.html" class="footer-link">Our Coffee&#x27;s V3</a></li>
-                            <li><a href="shop.html" class="footer-link">Shop V1</a></li>
-                            <li><a href="shop-v2.html" class="footer-link">Shop V2</a></li>
-                            <li><a href="shop-v3.html" class="footer-link">Shop V3</a></li>
+                            <li><a href="/" class="footer-link">Home V1 (Retail)</a></li>
+                            <li><a href="/home-version-two" class="footer-link">Home V2 (Wholesale)</a></li>
+                            <li><a href="/home-version-three" class="footer-link">Home V3 (Café)</a></li>
+                            <li><a href="/our-coffees" class="footer-link">Our Coffee&#x27;s V1</a></li>
+                            <li><a href="/our-coffees-v2" class="footer-link">Our Coffee&#x27;s V2</a></li>
+                            <li><a href="/our-coffees-v3" class="footer-link">Our Coffee&#x27;s V3</a></li>
+                            <li><a href="/shop" class="footer-link">Shop V1</a></li>
+                            <li><a href="/shop-v2" class="footer-link">Shop V2</a></li>
+                            <li><a href="/shop-v3" class="footer-link">Shop V3</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
                         <h2 class="footer-heading">More pages</h2>
                         <div class="w-layout-grid footer-more-pages-grid">
                             <ul role="list" class="w-list-unstyled">
-                                <li><a href="contact.html" class="footer-link">Contact</a></li>
-                                <li><a href="journal" class="footer-link">Journal</a></li>
-                                <li><a href="our-locations.html" class="footer-link">Locations</a></li>
-                                <li><a href="courses-and-training.html" class="footer-link">Courses &amp; Training</a></li>
-                                <li><a href="terms-and-conditions.html" class="footer-link">Terms and Conditions</a></li>
-                                <li><a href="become-a-stockist.html" class="footer-link">Become a Stockist</a></li>
-                                <li><a href="log-in.html" class="footer-link">Log In</a></li>
+                                <li><a href="/contact" class="footer-link">Contact</a></li>
+                                <li><a href="/journal" class="footer-link">Journal</a></li>
+                                <li><a href="/our-locations" class="footer-link">Locations</a></li>
+                                <li><a href="/courses-and-training" class="footer-link">Courses &amp; Training</a></li>
+                                <li><a href="/terms-and-conditions" class="footer-link">Terms and Conditions</a></li>
+                                <li><a href="/become-a-stockist" class="footer-link">Become a Stockist</a></li>
+                                <li><a href="/log-in" class="footer-link">Log In</a></li>
                             </ul>
                             <ul role="list" class="w-list-unstyled">
-                                <li><a href="sign-up" class="footer-link">Sign Up</a></li>
-                                <li><a href="forgot-password" class="footer-link">Forgotten Password</a></li>
-                                <li><a href="404" class="footer-link">404</a></li>
-                                <li><a href="401" class="footer-link">401 (Password Page)</a></li>
-                                <li><a href="licences-assets.html" class="footer-link">Licenses &amp; Assets</a></li>
-                                <li><a href="styleguide.html" class="footer-link">Styleguide</a></li>
-                                <li><a href="components.html" class="footer-link">Components</a></li>
+                                <li><a href="/sign-up" class="footer-link">Sign Up</a></li>
+                                <li><a href="/forgot-password" class="footer-link">Forgotten Password</a></li>
+                                <li><a href="/404" class="footer-link">404</a></li>
+                                <li><a href="/401" class="footer-link">401 (Password Page)</a></li>
+                                <li><a href="/licences-assets" class="footer-link">Licenses &amp; Assets</a></li>
+                                <li><a href="/styleguide" class="footer-link">Styleguide</a></li>
+                                <li><a href="/components" class="footer-link">Components</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="footer-column">
                         <h2 class="footer-heading">Contact</h2>
                         <ul role="list" class="w-list-unstyled">
-                            <li><a href="mailto:hey@barebeans.com" class="footer-link">international@mail.ru</a></li>
-                            <li><a href="tel:+440202344890" class="footer-link">+998 90 915 0172</a></li>
-                            <li><a href="tel:+440203948902" class="footer-link">+998 90 915 0172</a></li>
+                            <li><a href="mailto:hey@barebeans.com" class="footer-link">hey@barebeans.com</a></li>
+                            <li><a href="tel:+440202344890" class="footer-link">+44 020 2344 890</a></li>
+                            <li><a href="tel:+440203948902" class="footer-link">+44 020 3948 902</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
                         <h2 class="footer-heading">Social</h2>
                         <ul role="list" class="footer-social-list w-list-unstyled">
                             <li>
-                                <a href="http://www.twitter.com/" target="_blank" class="footer-social-link w-inline-block">
+                                <a href="http://www.twitter.com" target="_blank" class="footer-social-link w-inline-block">
                                     <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6048c1e6f7ef8f8267038111_icons8_twitter.svg" loading="lazy" alt="Twitter Logo" class="footer-social-icon" />
                                 </a>
                             </li>
                             <li>
-                                <a href="http://www.facebook.com/" target="_blank" class="footer-social-link w-inline-block">
+                                <a href="http://www.facebook.com" target="_blank" class="footer-social-link w-inline-block">
                                     <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6048c23aaa2882344e8c4ca2_icons8_facebook_f.svg" loading="lazy" alt="Facebook Logo" class="footer-social-icon" />
                                 </a>
                             </li>
                             <li>
-                                <a href="http://www.instagram.com/" target="_blank" class="footer-social-link w-inline-block">
+                                <a href="http://www.Instagram.com" target="_blank" class="footer-social-link w-inline-block">
                                     <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6048c24e7c3e9a65e90c2004_icons8_instagram.svg" loading="lazy" alt="Instagram Logo" class="footer-social-icon" />
                                 </a>
                             </li>
                             <li>
-                                <a href="http://www.tiktok.com/" target="_blank" class="footer-social-link w-inline-block">
+                                <a href="http://www.tiktok.com" target="_blank" class="footer-social-link w-inline-block">
                                     <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/6048c26859dae6e6849cde8a_icons8_tiktok.svg" loading="lazy" alt="Tik Tok Logo" class="footer-social-icon" />
                                 </a>
                             </li>
@@ -682,8 +726,8 @@
                                     alt="PayPal Logo"
                                     class="trust-card-logo"
                                 />
-                                <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/604a1e7abac9d18cad12bccb_Google Pay Logo.svg" loading="lazy" alt="Google Pay Logo" class="trust-card-logo" />
-                                <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/604a1e7aebaed2530c4e5e55_Apple Pay Logo.svg" loading="lazy" alt="Apple Pay Logo" class="trust-card-logo" />
+                                <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/604a1e7abac9d18cad12bccb_Google%20Pay%20Logo.svg" loading="lazy" alt="Google Pay Logo" class="trust-card-logo" />
+                                <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/604a1e7aebaed2530c4e5e55_Apple%20Pay%20Logo.svg" loading="lazy" alt="Apple Pay Logo" class="trust-card-logo" />
                                 <img src="https://assets.website-files.com/60366f34aa47ec600cc3023c/604a1ed801af116f97709f16_mc_vrt_pos.svg" loading="lazy" alt="Mastercard Logo" class="trust-card-logo" />
                                 <img
                                     src="https://assets.website-files.com/60366f34aa47ec600cc3023c/604a1f33a862ecafa0ec33f3_full-color-800x450.jpg"
@@ -712,7 +756,7 @@
                         </div>
                         <div>
                             Copyright © Bare Beans Ltd. All rights reserved.<br />
-                            Powered by <a href="http://www.webflow.com/" target="_blank">Webflow </a>/ Built by <a href="https://webflow.com/templates/designers/aaron-grieve" target="_blank">Aaron Grieve</a>
+                            Powered by <a href="http://www.webflow.com" target="_blank">Webflow </a>/ Built by <a href="https://webflow.com/templates/designers/aaron-grieve" target="_blank">Aaron Grieve</a>
                         </div>
                     </div>
                 </div>
@@ -725,6 +769,6 @@
             crossorigin="anonymous"
         ></script>
         <script src="https://assets.website-files.com/60366f34aa47ec600cc3023c/js/webflow.47518d9bb.js" type="text/javascript"></script>
-        <!--[if lte IE 9]> <script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+        <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
     </body>
 </html>

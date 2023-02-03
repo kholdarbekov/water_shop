@@ -32,14 +32,19 @@ class Product(CommonInfo):
     """Represents product type"""
 
     name = models.CharField(max_length=64)
+    image = models.ImageField(upload_to="products/%Y/%m/%d", blank=True)
     price = models.DecimalField(max_digits=8, decimal_places=2)
     unit = models.CharField(
         max_length=32, choices=MEASURE_UNIT, default=MEASURE_UNIT[1][0]
     )
     description = HTMLField()
+    available = models.BooleanField(default=True)
 
     class Meta:
         abstract = True
+        indexes = [
+            models.Index(fields=["name"]),
+        ]
 
 
 class Water(Product):
